@@ -1,0 +1,48 @@
+/* GLOBAL STYLES */
+body {
+    background: white;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter-logo h1 {
+    color: white;
+    font-family: cursive;
+    font-size: 30px;
+    overflow: hidden;
+    border-right: .20px solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    justify-content: left;
+    animation:
+            typing 1s steps(5, end),
+            blink-caret 1.1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+    from {height: 35px }
+
+}
+
+.HomeDesc{
+animation: slide 1s steps(30, end), scale 1s steps(60, end);
+
+}
+@keyframes slide {
+    from {filter:opacity(0%)}
+    to {filter: opacity(100%)}
+}
+
+@keyframes scale {
+    from {transform: scale(90%)}
+    to {transform: scale(100%)}
+}

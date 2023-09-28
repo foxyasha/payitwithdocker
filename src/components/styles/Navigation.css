@@ -1,0 +1,93 @@
+.nave{
+    position: fixed;
+    background: rgba(0, 0, 0, .2);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.navigate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+/* Drop-menu */
+.menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-title {
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    background: #000000;
+    color: #ffffff;
+    transition: 0.3s background-color;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 20px 20px 0 0;
+    text-decoration: none;
+}
+
+.menu-dropdown {
+    min-width: 100%;
+    padding: 0 0 15px 0;
+    position: absolute;
+    background: rgba(128, 128, 128, 0.57);
+    border-radius: 0 0 10px 10px;
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 100;
+    transition: 0.5s padding, 0.5s background;
+}
+
+.menu:not(:hover) > .menu-dropdown {
+    padding: 0px 0;
+    background: rgba(128, 128, 128, 0.57);
+    z-index: 99;
+}
+
+.menu:not(:hover) > .menu-dropdown:after {
+    border-top-color: rgba(128, 128, 128, 0.57);
+}
+
+.menu:not(:hover) > .menu-title:after {
+    border-bottom-color: #000000;
+}
+
+.menu-dropdown > * {
+    overflow: hidden;
+    height: 30px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    transition: 0.5s height cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s padding cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s margin cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s 0.2s color, 0.2s background-color;
+}
+
+.menu-dropdown > *:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.menu:not(:hover) > .menu-dropdown > * {
+    visibility: hidden;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    color: rgba(25, 25, 25, 0);
+    transition: 0.5s 0.1s height, 0.5s 0.1s padding, 0.5s 0.1s margin, 0.3s color, 0.6s visibility;
+    z-index: 99;
+}
